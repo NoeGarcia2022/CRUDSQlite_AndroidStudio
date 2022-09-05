@@ -35,81 +35,80 @@
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                app:srcCompat="@drawable/img1"/>
+                app:srcCompat="@drawable/img1" />
 
             <EditText
                 android:id="@+id/et_codigo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Ingrese el codigo"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="15dp"
+                android:hint="Ingrese el codigo"
                 android:inputType="phone"
-                android:textSize="25sp"
-                android:textColor="#fff"/>
+                android:textColor="#fff"
+                android:textSize="25sp" />
 
             <EditText
                 android:id="@+id/et_descripcion"
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
-                android:hint="Ingrese una descripcion"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="15dp"
-                android:textSize="25sp"
+                android:hint="Ingrese una descripcion"
                 android:inputType="text"
-                android:textColor="#fff"/>
+                android:textColor="#fff"
+                android:textSize="25sp" />
 
             <EditText
                 android:id="@+id/et_precio"
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
-                android:hint="Ingrese el precio"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="15dp"
+                android:hint="Ingrese el precio"
                 android:inputType="phone"
-                android:textSize="25sp"
-                android:textColor="#fff"/>
+                android:textColor="#fff"
+                android:textSize="25sp" />
 
             <Button
                 android:id="@+id/btn_guardar"
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
-                android:text="GUARDAR REGISTRO"
                 android:layout_gravity="center"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginTop="15dp"
+                android:text="GUARDAR REGISTRO" />
 
             <Button
                 android:id="@+id/btn_consultar1"
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
-                android:text="CONSULTAR POR CODIGO"
                 android:layout_gravity="center"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginTop="15dp"
+                android:text="CONSULTAR POR CODIGO" />
 
             <Button
                 android:id="@+id/btn_consultar2"
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
-                android:text="CONSULTAR POR DESCRIPCION"
                 android:layout_gravity="center"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginTop="15dp"
+                android:text="CONSULTAR POR DESCRIPCION" />
 
             <Button
                 android:id="@+id/btn_eliminar"
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
-                android:text="BORRAR REGISTRO"
                 android:layout_gravity="center"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginTop="15dp"
+                android:text="BORRAR REGISTRO" />
 
             <Button
                 android:id="@+id/btn_actualizarRegistro"
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
-                android:text="ACTUALIZAR REGISTRO"
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp"
-                />
+                android:text="ACTUALIZAR REGISTRO" />
 
         </LinearLayout>
     </ScrollView>

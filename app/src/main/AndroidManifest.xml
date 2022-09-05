@@ -17,6 +17,8 @@
             android:name=".DetallesArticulos"
             android:exported="false" />
         <activity
+            android:configChanges="screenSize|orientation"
+            android:windowSoftInputMode="stateHidden"
             android:name=".ListViewArticulos"
             android:exported="false" />
         <activity
@@ -26,6 +28,8 @@
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
+            android:configChanges="screenSize|orientation"
+            android:windowSoftInputMode="stateHidden"
             android:theme="@style/Theme.Crud_SQLite.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
