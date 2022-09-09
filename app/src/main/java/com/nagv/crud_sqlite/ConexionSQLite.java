@@ -44,7 +44,7 @@ public class ConexionSQLite extends SQLiteOpenHelper {
         return bd;
     }
 
-    public boolean InsertarTradicional(Dto datos){
+    public boolean InsertarTradicional(Context context, Dto datos){
         boolean estado = true;
         int resultado;
 
@@ -55,6 +55,7 @@ public class ConexionSQLite extends SQLiteOpenHelper {
 
             Cursor fila = bd().rawQuery("select codigo from articulos where codigo='"+codigo+"'", null);
             if (fila.moveToFirst()==true){
+                Toast.makeText(context, "false", Toast.LENGTH_SHORT).show();
                 estado = false;
             }else{
                 String SQL="INSERT INTO articulos \n"+
@@ -64,14 +65,16 @@ public class ConexionSQLite extends SQLiteOpenHelper {
 
                 bd().execSQL(SQL);
                 bd().close();
-
+                Toast.makeText(context, "true", Toast.LENGTH_SHORT).show();
                 estado = true;
             }
         }catch (Exception e){
             estado = false;
             Log.e("error.",e.toString());
+            Toast.makeText(context, "catch", Toast.LENGTH_SHORT).show();
         }
         return estado;
+
     }
 
     public boolean insertardatos(Dto datos){

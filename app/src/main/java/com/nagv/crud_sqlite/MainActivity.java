@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     boolean inputEt=false;
     boolean inputEd=false;
-    boolean input1=false;
+    boolean inputEx=false;
     int resultadoInsert=0;
 
     Modal ventanas = new Modal();
@@ -179,38 +179,50 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void alta(View v){
+        Toast.makeText(this, "holaa", Toast.LENGTH_SHORT).show();
         if (et_codigo.getText().toString().length()==0){
             et_codigo.setError("Campo obligatorio");
             inputEt=false;
         }else {
             inputEt=true;
-        }if (et_descripcion.getText().toString().length()==0){
-            et_descripcion.setError("Campo obligatorio");
-            inputEt=false;
-        }else {
-            inputEt=true;
-        }if (et_precio.getText().toString().length()==0){
-            et_precio.setError("Campo obligatorio");
-            inputEt=false;
-        }else {
-            inputEt=true;
         }
-        if (inputEt && inputEd && input1){
+
+        if (et_descripcion.getText().toString().length()==0){
+            et_descripcion.setError("Campo obligatorio");
+            inputEd=false;
+        }else {
+            inputEd=true;
+        }
+
+        if (et_precio.getText().toString().length()==0){
+            et_precio.setError("Campo obligatorio");
+            inputEx=false;
+        }else {
+            inputEx=true;
+        }
+        if (inputEt && inputEd && inputEx){
+            //Toast.makeText(this, "12345", Toast.LENGTH_SHORT).show();
             try {
                 datos.setCodigo(Integer.parseInt(et_codigo.getText().toString()));
                 datos.setDescripcion(et_descripcion.getText().toString());
                 datos.setPrecio(Double.parseDouble(et_precio.getText().toString()));
 
-                if (conexion.InsertarTradicional(datos)){
+                //Toast.makeText(this, ""+conexion.InsertarTradicional(this, datos), Toast.LENGTH_SHORT).show();
+
+
+                if (conexion.InsertarTradicional(this,datos)==true){
                     Toast.makeText(this, "Registro agregado satisfactoriamente!", Toast.LENGTH_SHORT).show();
                     limpiarDatos();
                 }else {
                     Toast.makeText(getApplicationContext(), "Error. Ya existe un registro\n"+"Codigo:"+et_codigo.getText().toString(), Toast.LENGTH_SHORT).show();
                     limpiarDatos();
                 }
+
+
             }catch (Exception e){
                 Toast.makeText(this, "ERROR. Ya existe", Toast.LENGTH_SHORT).show();
             }
+
         }
     }
 

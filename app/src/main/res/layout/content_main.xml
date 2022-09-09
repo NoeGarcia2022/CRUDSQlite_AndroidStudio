@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:background="@drawable/fondo"
+    android:background="@drawable/fondo2"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity"
     tools:showIn="@layout/activity_main">
@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:text="DATOS DEL PRODUCTO"
         android:textSize="26dp"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/black"
         android:textStyle="bold"
         android:layout_marginTop="20dp"
         android:fontFamily="serif-monospace"
@@ -35,7 +35,7 @@
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                app:srcCompat="@drawable/img1" />
+                app:srcCompat="@drawable/producto" />
 
             <EditText
                 android:id="@+id/et_codigo"
@@ -76,6 +76,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp"
+                android:onClick="alta"
                 android:text="GUARDAR REGISTRO" />
 
             <Button
@@ -83,6 +84,7 @@
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:onClick="consultaporcodigo"
                 android:layout_marginTop="15dp"
                 android:text="CONSULTAR POR CODIGO" />
 
