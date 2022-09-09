@@ -3,11 +3,15 @@ package com.nagv.crud_sqlite;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Modal {
     Dialog myDialog;
@@ -48,9 +52,31 @@ public class Modal {
                 if (validaInput){
                     String cod = et_cod.getText().toString();
                     datos.setCodigo(Integer.parseInt(cod));
-                    if (conexion.consultaCodigo(datos));
+                    if (conexion.consultaCodigo(datos)){
+
+                        codigo = String.valueOf(datos.getCodigo());
+                        descripcion=datos.getDescripcion();
+                        precio=String.valueOf(datos.getPrecio());
+                        String action;
+                        Intent intent = new Intent(context,MainActivity.class);
+                        intent.putExtra("senal" ,"1");
+                        intent.putExtra("codigo",codigo);
+                        intent.putExtra("descripcion",descripcion);
+                        intent.putExtra("precio",precio);
+                        context.startActivity(intent);
+                        
+                        myDialog.dismiss();
+                    }else{
+                        Toast.makeText(context, "No se han encontrado resultados para la busqueda especificada", Toast.LENGTH_SHORT).show();
+                    }
+
+                }else {
+                    Toast.makeText(context, "No se ha especificado lo que desea buscar", Toast.LENGTH_SHORT).show();
+                    }
                 }
-            }
-        });
+            });
+            myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+            myDialog.show();
+
     }
 }

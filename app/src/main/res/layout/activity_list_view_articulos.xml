@@ -28,10 +28,14 @@
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
             />
 
-        <!--<SearchView
+        <SearchView
+            android:id="@+id/SearchView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            />-->
+            android:background="#fff"
+            android:queryHint="Search"
+            android:iconifiedByDefault="false"
+            />
 
 
         <Space
