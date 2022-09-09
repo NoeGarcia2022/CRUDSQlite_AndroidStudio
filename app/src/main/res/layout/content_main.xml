@@ -103,9 +103,14 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp"
+<<<<<<< HEAD
                 android:text="BORRAR REGISTRO"
                 android:onClick="bajaporcodigo"
                 />
+=======
+                android:onClick="bajaporcodigo"
+                android:text="BORRAR REGISTRO" />
+>>>>>>> d9e774c88381fed872277fbdf8d38d31c2157315
 
             <Button
                 android:id="@+id/btn_actualizarRegistro"
@@ -113,9 +118,14 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp"
+<<<<<<< HEAD
                 android:text="ACTUALIZAR REGISTRO"
                 android:onClick="modificacion"
                 />
+=======
+                android:onClick="modificacion"
+                android:text="ACTUALIZAR REGISTRO" />
+>>>>>>> d9e774c88381fed872277fbdf8d38d31c2157315
 
         </LinearLayout>
     </ScrollView>
