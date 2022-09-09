@@ -94,6 +94,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp"
+                android:onClick="consultarpordescripcion"
                 android:text="CONSULTAR POR DESCRIPCION" />
 
             <Button
@@ -102,6 +103,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp"
+                android:onClick="bajaporcodigo"
                 android:text="BORRAR REGISTRO" />
 
             <Button
@@ -110,6 +112,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp"
+                android:onClick="modificacion"
                 android:text="ACTUALIZAR REGISTRO" />
 
         </LinearLayout>
