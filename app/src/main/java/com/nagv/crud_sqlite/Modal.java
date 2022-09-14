@@ -64,7 +64,7 @@ public class Modal {
                         intent.putExtra("descripcion",descripcion);
                         intent.putExtra("precio",precio);
                         context.startActivity(intent);
-                        
+
                         myDialog.dismiss();
                     }else{
                         Toast.makeText(context, "No se han encontrado resultados para la busqueda especificada", Toast.LENGTH_SHORT).show();
@@ -72,11 +72,10 @@ public class Modal {
 
                 }else {
                     Toast.makeText(context, "No se ha especificado lo que desea buscar", Toast.LENGTH_SHORT).show();
-                    }
                 }
-            });
-            myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-            myDialog.show();
-
+            }
+        });
+        myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        myDialog.show();
     }
 }
