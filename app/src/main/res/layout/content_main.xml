@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:background="@drawable/fondo2"
+    android:background="@drawable/playa"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity"
     tools:showIn="@layout/activity_main">
@@ -35,7 +35,7 @@
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                app:srcCompat="@drawable/producto" />
+                app:srcCompat="@drawable/img3" />
 
             <EditText
                 android:id="@+id/et_codigo"
@@ -46,7 +46,9 @@
                 android:hint="Ingrese el codigo"
                 android:inputType="phone"
                 android:textColor="#fff"
-                android:textSize="25sp" />
+                android:textColorHint="@color/black"
+                android:textSize="27sp"
+                android:textStyle="bold|italic" />
 
             <EditText
                 android:id="@+id/et_descripcion"
@@ -57,7 +59,10 @@
                 android:hint="Ingrese una descripcion"
                 android:inputType="text"
                 android:textColor="#fff"
-                android:textSize="25sp" />
+                android:textColorHighlight="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="27sp"
+                android:textStyle="bold|italic" />
 
             <EditText
                 android:id="@+id/et_precio"
@@ -68,7 +73,9 @@
                 android:hint="Ingrese el precio"
                 android:inputType="phone"
                 android:textColor="#fff"
-                android:textSize="25sp" />
+                android:textColorHint="@color/black"
+                android:textSize="27sp"
+                android:textStyle="bold|italic" />
 
             <Button
                 android:id="@+id/btn_guardar"
@@ -77,16 +84,18 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp"
                 android:onClick="alta"
-                android:text="GUARDAR REGISTRO" />
+                android:text="GUARDAR REGISTRO"
+                android:textColor="#F41313" />
 
             <Button
                 android:id="@+id/btn_consultar1"
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:onClick="consultaporcodigo"
                 android:layout_marginTop="15dp"
-                android:text="CONSULTAR POR CODIGO" />
+                android:onClick="consultaporcodigo"
+                android:text="CONSULTAR POR CODIGO"
+                android:textColor="#E11313" />
 
             <Button
                 android:id="@+id/btn_consultar2"
@@ -95,7 +104,8 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp"
                 android:onClick="consultarpordescripcion"
-                android:text="CONSULTAR POR DESCRIPCION" />
+                android:text="CONSULTAR POR DESCRIPCION"
+                android:textColor="#ED0D0D" />
 
             <Button
                 android:id="@+id/btn_eliminar"
@@ -103,9 +113,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp"
-                android:text="BORRAR REGISTRO"
                 android:onClick="bajaporcodigo"
-                />
+                android:text="BORRAR REGISTRO"
+                android:textColor="#ED0D0D"/>
 
 
             <Button
@@ -114,9 +124,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp"
-                android:text="ACTUALIZAR REGISTRO"
                 android:onClick="modificacion"
-                />
+                android:text="ACTUALIZAR REGISTRO"
+                android:textColor="#ED0D0D"/>
 
 
         </LinearLayout>

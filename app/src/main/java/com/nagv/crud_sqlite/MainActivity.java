@@ -68,8 +68,8 @@ public class MainActivity extends AppCompatActivity {
         toolbar.setTitleTextColor(getResources().getColor(R.color.mycolor1));
         toolbar.setTitleMargin(0,0,0,0);
         toolbar.setSubtitle("CRUD SQLite - 2022");
-        toolbar.setSubtitleTextColor(getResources().getColor(R.color.mycolor));
-        toolbar.setSubtitle("Estudiante. Garcia");
+        toolbar.setSubtitleTextColor(getResources().getColor(R.color.black));
+        toolbar.setSubtitle("Estudiante. Ismael Panameño");
         setSupportActionBar(toolbar);
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
